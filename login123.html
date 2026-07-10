@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1 style="text-align : center">LOGIN</h1>
+    <form method="post">
+        <div style="text-align: center;">
+    <label>EXPENSE</label><br><br>
+    <input type = "text"  name ='expense' placeholder = "enter ur expense"><br><br>
+           <label>amount</label><br><br>
+    <input type = "text"  name ='amount'placeholder = "enter ur amount"><br><br>
+            <label>category</label><br><br>
+            <input type = "text"  name ='category'placeholder = "enter ur category"><br><br>
+            <input type="submit" value="login">
+        </div>
+    </form>
+ <h2>Expenses</h2>
+   <table>
+       <tr>
+           <th>expenses</th>
+           <th>amount</th>
+           <th>category</th>
+       </tr>
+       {% for row in expenses %}
+
+       <tr>
+
+           <td> {{ row[0]}}</td>
+           <td> {{ row[1]}}</td>
+           <td> {{ row[2]}}</td>
+       </tr>
+       {% endfor %}
+
+   </table>
+        <h3>total spent {{total}}</h3>
+       <h3> CATEGORY WISE SPENDINGS</h3>
+       <table>
+           <tr>
+           <th>category</th>
+           <th>amount</th>
+           </tr>
+             {% for cat_row in category_total %}
+           <tr>
+               <th>{{cat_row[0] }}</th>
+            <th>{{cat_row[1] }}</th>
+           </tr>
+              {% endfor %}
+       </table>
+
+   </table>
+
+
+</body>
+</html>
