@@ -3,6 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+       .block {
+        display :flex;
+        justify-content :center ;
+        gap :20px;
+        align-item : flex-start ;
+        }
+        .table123{
+        text-align: center ;
+        }
+        h2{
+        text-align:center;
+        }
+        h3 {
+         margin-top: 300px;
+         }
+
+
+         table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .block123{
+        text-align :center;
+        font-size:32px;
+        margin-top: 300px;
+        }
+        th, td {
+        border: 1px solid #999;
+        padding: 8px 15px;
+        }
+
+    </style>
 </head>
 <body>
  <h1 style="text-align : center">LOGIN</h1>
@@ -18,7 +51,9 @@
         </div>
     </form>
  <h2>Expenses</h2>
-   <table>
+ <div class ="block">
+ <div  class ="table123">
+ <table>
        <tr>
            <th>expenses</th>
            <th>amount</th>
@@ -35,8 +70,13 @@
        {% endfor %}
 
    </table>
-        <h3>total spent {{total}}</h3>
-       <h3> CATEGORY WISE SPENDINGS</h3>
+     </div>
+
+        <h3 class ="block123">TOTAL SPEND {{total}}</h3>
+       <div class ="table123">
+       <h4> CATEGORY WISE SPENDINGS</h4>
+
+
        <table>
            <tr>
            <th>category</th>
@@ -51,6 +91,8 @@
        </table>
 
    </table>
+</div>
+</div>
 
 
 </body>
